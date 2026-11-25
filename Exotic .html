@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Exotic Living — premium sofas, recliners and customized furniture. Enquire directly on WhatsApp.">
+  <meta name="theme-color" content="#171512">
+  <title>Exotic Living | Premium Sofas & Recliners</title>
+  <style>
+    :root{--ink:#171512;--muted:#6f6a61;--cream:#f5f1e9;--paper:#fffdf9;--gold:#b99a65;--line:#e8e1d5}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+    .top{background:var(--ink);color:#f7f1e6;padding:11px 0;font-size:12px;letter-spacing:.12em;text-align:center}
+    header{position:sticky;top:0;background:rgba(255,253,249,.96);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid var(--line)}
+    nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,serif;font-size:25px;letter-spacing:.07em}.brand small{display:block;font:10px Arial;letter-spacing:.28em;color:var(--muted);margin-top:2px}
+    .links{display:flex;gap:25px;font-size:13px;color:#514c44}.links a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:white;padding:13px 20px;border:1px solid var(--ink);font-size:12px;letter-spacing:.08em;text-transform:uppercase;transition:.2s}
+    .btn:hover{background:var(--gold);border-color:var(--gold)}.btn.light{background:transparent;color:var(--ink)}
+    .hero{background:linear-gradient(110deg,rgba(18,16,13,.83),rgba(18,16,13,.25)),url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1900&q=85') center/cover;min-height:590px;display:flex;align-items:center;color:white}
+    .hero-content{max-width:620px;padding:80px 0}.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.12}
+    h1{font-size:clamp(42px,6vw,72px);margin:18px 0}.hero p{max-width:490px;color:#eee7dc;font-size:16px;margin-bottom:28px}
+    .section{padding:82px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 42px}.section-head h2{font-size:clamp(32px,4vw,46px);margin:12px 0}.section-head p{color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .tile{background:var(--cream);min-height:255px;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;position:relative;overflow:hidden}
+    .tile:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.52))}
+    .tile:nth-child(1){background:linear-gradient(135deg,#c8b9a2,#776b5c)}.tile:nth-child(2){background:linear-gradient(135deg,#d9d0c2,#8d8171)}.tile:nth-child(3){background:linear-gradient(135deg,#b8b0a3,#5e5b55)}
+    .tile>*{position:relative;color:white}.tile h3{font-size:27px;margin:0 0 7px}.tile p{font-size:13px;margin:0;color:#f2eee8}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .product{border:1px solid var(--line);background:white}.product-art{height:210px;background:linear-gradient(145deg,#e7dfd2,#b9ad9c);display:flex;align-items:center;justify-content:center;color:#665d51;font:italic 18px Georgia}
+    .product-info{padding:20px}.product-info h3{font-size:23px;margin:0 0 8px}.product-info p{font-size:13px;color:var(--muted);min-height:40px}
+    .product-info a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:4px}
+    .promise{background:var(--ink);color:#f7f1e6}.promise .section-head p{color:#c8c0b3}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;text-align:center}.feature{padding:12px}.feature b{display:block;font:24px Georgia;color:var(--gold);margin-bottom:9px}.feature span{font-size:13px;color:#d8d0c4}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-art{min-height:390px;background:linear-gradient(135deg,#d9cdbb,#9b8d79);display:flex;align-items:center;justify-content:center;color:#51483d;font:italic 24px Georgia;text-align:center;padding:25px}
+    .about h2{font-size:42px;margin:12px 0}.about p{color:var(--muted);font-size:14px}
+    .contact{background:var(--cream);text-align:center}.contact h2{font-size:42px;margin:12px 0}.contact p{color:var(--muted);max-width:550px;margin:0 auto 25px}
+    footer{background:#171512;color:#d7d0c5;padding:34px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{font:20px Georgia;letter-spacing:.08em;color:white}
+    .wa-float{position:fixed;right:20px;bottom:20px;background:#167b4b;color:white;padding:14px 18px;border-radius:30px;font-size:13px;box-shadow:0 5px 20px #0003;z-index:20}
+    @media(max-width:760px){.links{display:none}.hero{min-height:530px}.grid,.products,.features,.about{grid-template-columns:1fr}.section{padding:60px 0}.about-art{min-height:260px}.tile{min-height:210px}.product-art{height:190px}}
+  </style>
+</head>
+<body>
+  <div class="top">PREMIUM SOFAS · RECLINERS · CUSTOMIZED FURNITURE</div>
+  <header><div class="wrap"><nav>
+    <a class="brand" href="#">EXOTIC LIVING<small>COMFORT • CRAFT • STYLE</small></a>
+    <div class="links"><a href="#collections">Collections</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <a class="btn" href="https://wa.me/919270530724?text=Hello%20Exotic%20Living%2C%20I%20want%20to%20enquire%20about%20your%20sofas.">Enquire Now</a>
+  </nav></div></header>
+
+  <main>
+    <section class="hero"><div class="wrap"><div class="hero-content">
+      <div class="eyebrow">Designed for the way you live</div>
+      <h1>Make room for<br>better living.</h1>
+      <p>Discover premium sofas and recliners, thoughtfully crafted for comfort, style and your home. Customization available as per your requirements.</p>
+      <a class="btn" href="https://wa.me/919270530724?text=Hello%20Exotic%20Living%2C%20please%20share%20your%20sofa%20catalogue.">Explore on WhatsApp</a>
+      <a class="btn light" href="#collections">View Collections</a>
+    </div></div></section>
+
+    <section class="section" id="collections"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Our collections</div><h2>Comfort, in every form.</h2><p>Explore furniture made to complement your space and your everyday living.</p></div>
+      <div class="grid">
+        <a class="tile" href="#products"><h3>Premium Sofas</h3><p>Elegant seating for your living room</p></a>
+        <a class="tile" href="#products"><h3>Recliners</h3><p>Relaxation with thoughtful features</p></a>
+        <a class="tile" href="#contact"><h3>Custom Furniture</h3><p>Your preferred style, size and finish</p></a>
+      </div>
+    </div></section>
+
+    <section class="section" id="products" style="background:#faf8f3"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Featured range</div><h2>Find your comfort.</h2><p>Ask us for current designs, fabric choices, configurations and pricing.</p></div>
+      <div class="products">
+        <article class="product"><div class="product-art">Sofa collection photo</div><div class="product-info"><h3>3+2 Sofa Sets</h3><p>Multiple layouts, upholstery choices and customization options.</p><a href="https://wa.me/919270530724?text=Hello%2C%20I%20am%20interested%20in%203%2B2%20sofa%20sets.">Enquire about this</a></div></article>
+        <article class="product"><div class="product-art">Recliner collection photo</div><div class="product-info"><h3>Motorized Recliners</h3><p>Comfort-focused seating with selected modern features.</p><a href="https://wa.me/919270530724?text=Hello%2C%20I%20am%20interested%20in%20motorized%20recliners.">Enquire about this</a></div></article>
+        <article class="product"><div class="product-art">Custom furniture photo</div><div class="product-info"><h3>Customized Designs</h3><p>Discuss your preferred dimensions, fabric and configuration.</p><a href="https://wa.me/919270530724?text=Hello%2C%20I%20want%20a%20customized%20sofa.">Enquire about this</a></div></article>
+      </div>
+    </div></section>
+
+    <section class="section promise"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">The Exotic Living promise</div><h2>Made around your comfort.</h2><p>Talk to our team about the right design and specifications for your home.</p></div>
+      <div class="features"><div class="feature"><b>01</b><span>Customization options to suit your space</span></div><div class="feature"><b>02</b><span>Choice of designs, fabrics and finishes</span></div><div class="feature"><b>03</b><span>Product-specific warranty details shared before ordering</span></div></div>
+    </div></section>
+
+    <section class="section" id="about"><div class="wrap about">
+      <div class="about-art">Add your real sofa<br>showroom or product photo here</div>
+      <div><div class="eyebrow">About Exotic Living</div><h2>Furniture that feels like yours.</h2><p>Exotic Living brings together premium sofa and recliner designs with customization options for modern homes. Connect with us to explore available models, materials, dimensions and delivery details.</p><a class="btn" href="https://wa.me/919270530724?text=Hello%20Exotic%20Living%2C%20I%20would%20like%20to%20know%20more.">Talk to our team</a></div>
+    </div></section>
+
+    <section class="section contact" id="contact"><div class="wrap">
+      <div class="eyebrow">Let's connect</div><h2>Your new favourite seat<br>starts here.</h2>
+      <p>Tell us what you are looking for. Our team can help you with designs, customization, pricing and order enquiries.</p>
+      <a class="btn" href="https://wa.me/919270530724?text=Hello%20Exotic%20Living%2C%20I%20want%20to%20place%20an%20enquiry.">Chat on WhatsApp</a>
+      <p style="margin-top:22px;font-size:13px">Instagram: <strong>Exotic Living 09</strong></p>
+    </div></section>
+  </main>
+  <footer><div class="wrap foot"><div><strong>EXOTIC LIVING</strong><div>Premium Sofas · Recliners · Customized Furniture</div></div><div>India · WhatsApp: +91 92705 30724<br>© <span id="year"></span> Exotic Living</div></div></footer>
+  <a class="wa-float" href="https://wa.me/919270530724?text=Hello%20Exotic%20Living%2C%20I%20have%20a%20question.">WhatsApp Enquiry</a>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
